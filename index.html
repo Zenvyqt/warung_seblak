@@ -1,62 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Warung Seblak Mantul</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
 </head>
+
 <body>
+
+    <!-- Header -->
     <header>
         <h1>Selamat Datang di Warung Seblak Mantul</h1>
-        <p>Nikmati Seblak dengan berbagai level pedas yang menggoyang lidah!.</p>
+        <p>
+            Nikmati Seblak dengan berbagai level pedas
+            yang menggoyang lidah!
+        </p>
     </header>
 
+
+    <!-- Promo -->
     <section id="promo">
         <h2>Promo Hari Ini</h2>
-        <p id="promoMessage">Klik tombol di bawah ini untuk melihat promo spesial hari ini.</p>
-        <button onclick="tampilkanPromo()">Lihat Promo</button>
+
+        <p id="promoMessage">
+            Klik tombol di bawah ini untuk melihat promo spesial hari ini.
+        </p>
+
+        <button onclick="tampilkanPromo()">
+            Lihat Promo
+        </button>
     </section>
 
+
+    <!-- Menu -->
     <section id="menu">
         <h2>Menu Seblak Favorit</h2>
+
         <ul id="listMenu">
-            <!-- daftar menu akan ditampilkan javascript -->
+            <!-- Daftar menu akan ditampilkan oleh JavaScript -->
         </ul>
-        <button onclick="tampilkanMenu()">Tampilkan Menu</button>
+
+        <button onclick="tampilkanMenu()">
+            Tampilkan Menu
+        </button>
     </section>
 
+
+    <!-- Pemesanan -->
     <section id="order">
         <h2>Pesan Seblak</h2>
-        <p>Pilih Menu dan Masukkan Jumlah Pesanan</p>
-        <br>
-        <label for="pilihMenu">Menu Seblak:</label>
-        <select name="" id="pilihMenu">
-            <!-- pilihan menu diisi oleh javascript -->
-        </select>
-        <br><br>
-        <label for="inputJumlah">Jumlah:</label>
-        <input type="number" id="inputJumlah" placeholder="Jumlah Pesanan">
-        <br>
-        <button onclick="cekPesanan()">Pesan Sekarang</button>
-        <br><br>
-        <p id="hasilPesanan"></p>
-        <p id="totalBayar"></p>
+
+        <p>
+            Pilih Menu dan Masukkan Jumlah Pesanan
+        </p>
+
         <br>
 
-        <!-- input jumlah uang yang dibayar -->
-        <h3>Pembayaran</h3>
-        <label for="uangBayar">Jumlah Uang Dibayar:</label>
-        <input type="text" id="uangBayar" placeholder="Masukkan Jumlah Uang" inputmode="numeric" pattern="[0-9]*">
-        <br>
-        <button onclick="hitungKembalian()">Hitung Kembalian</button>
+        <!-- Pilihan menu -->
+        <label for="pilihMenu">
+            Menu Seblak:
+        </label>
+
+        <select id="pilihMenu">
+            <option value="">
+                Pilih menu Seblak
+            </option>
+        </select>
+
         <br><br>
+
+        <!-- Jumlah pesanan -->
+        <label for="inputJumlah">
+            Jumlah:
+        </label>
+
+        <input
+            type="number"
+            id="inputJumlah"
+            placeholder="Jumlah Pesanan"
+            min="1"
+        >
+
+        <br><br>
+
+        <button onclick="cekPesanan()">
+            Pesan Sekarang
+        </button>
+
+        <br><br>
+
+        <!-- Status pesanan -->
+        <p id="hasilPesanan"></p>
+
+        <!-- Total pembayaran -->
+        <p id="totalBayar"></p>
+
+        <br>
+
+
+        <!-- Pembayaran -->
+        <h3>Pembayaran</h3>
+
+        <label for="uangBayar">
+            Jumlah Uang Dibayar:
+        </label>
+
+        <input
+            type="text"
+            id="uangBayar"
+            placeholder="Masukkan Jumlah Uang"
+            inputmode="numeric"
+            pattern="[0-9]*"
+        >
+
+        <br><br>
+
+        <button onclick="hitungKembalian()">
+            Hitung Kembalian
+        </button>
+
+        <br><br>
+
+        <!-- Hasil kembalian -->
         <p id="hasilKembalian"></p>
     </section>
 
+
+    <!-- Footer -->
     <footer>
-        <p>&copy;2024 Warung Seblak Mantul. Semua Hak Dilindungi.</p>
+        <p>
+            &copy; 2024 Warung Seblak Mantul.
+            Semua Hak Dilindungi.
+        </p>
     </footer>
+
 </body>
 </html>
